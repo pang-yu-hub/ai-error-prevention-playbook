@@ -1,0 +1,3407 @@
+{
+  "meta": {
+    "name": "通用错误清单数据集（脱敏版）",
+    "version": "v1.0",
+    "schemaVersion": "1.0",
+    "language": "zh-CN",
+    "headline": "146卡/835教训，逻辑条数822",
+    "headline口径": {
+      "条目位": "146（=48条目卡+98单发，entries 数组长度）",
+      "教训": "835条通用教训（另4条项目专属不入本集，全库确认错误839条）",
+      "逻辑条数": "822（B62批次双版本折叠 835−13）"
+    },
+    "provenance": "来自约824个历史AI工作会话（档案登记口径）的8批盲审错误复盘：839条确认错误 → 按失败机制聚类的通用清单（146条目位/835教训）。全部条目为机制级转写，未复制任何原始会话引语。",
+    "desensitization": {
+      "声明": "机制级改写：保留失败机制/症状/正确做法，替换一切真实项目、客户、供应商、门店、食品、人名、城市与平台地址；来源键保留来源复盘体系的匿名会话短标识（无身份信息，仓库读者不可反查原文）以维持可对账性。",
+      "键格式": "B码:session短id:E##（E##为错误编号；D##为双版本对偶编号）",
+      "代号表": {
+        "批次": {
+          "B2": "盲审批次2",
+          "B3": "盲审批次3",
+          "B4": "盲审批次4",
+          "B5a": "盲审批次5A",
+          "B5b": "盲审批次5B",
+          "B61": "盲审批次6-1",
+          "B62": "盲审批次6-2",
+          "B63": "盲审批次6-3"
+        },
+        "项目": {
+          "P1": "供应链产品碳足迹核算（客户项目）",
+          "P2": "食品数据库与核算（客户项目）",
+          "P3": "产品环境声明（EPD）核算",
+          "P4": "电池制造项目数据",
+          "P5": "门店暖通/空调设备数据项目",
+          "P6": "跨项目公共任务池",
+          "P7": "公众号内容抓取工具线",
+          "P8": "IoT平台建筑节能分析线",
+          "P9": "园区储能项目线",
+          "P10": "锂产品碳足迹线",
+          "P11": "LCA方法学公共线",
+          "P12": "个人职业发展线",
+          "P13": "Agent框架运维与元数据线",
+          "P14": "智能充电线",
+          "P15": "数据中心（AIDC）碳足迹线",
+          "P16": "区域园区项目线",
+          "P17": "多城园区项目线"
+        },
+        "供应商": {
+          "S1": "P1供应商1",
+          "S2": "P5设备品牌1",
+          "S3": "P1供应商2",
+          "S4": "P1供应商3",
+          "S5": "第三方服务商"
+        },
+        "人名": "owner / 同事A / 同事B"
+      },
+      "旗标": "⚑=待终审旗标，语义保留；「待owner终审」=原文待裁决事项的角色化表述"
+    },
+    "schema": {
+      "entryType": "card=条目卡（机制聚类）；single=单发（未归卡的真实教训）",
+      "id": "大类字母-序号（卡=A-1式；单发=A-S1式），全库唯一",
+      "workpoint/symptom/correctPractice": "工作点/症状/正确做法（卡专属五要素之三）",
+      "caseStudy": "典型案例（脱敏机制级改写），sourceId=案例来源键",
+      "lessonCount": "该条目位覆盖的教训条数（卡=来源ids计数，单发=1）",
+      "sourceIds": "来源教训键列表（合计835，全局唯一）",
+      "flaggedSources/flags": "⚑待终审旗标（置信/复核待议等），语义见 desensitization.旗标",
+      "dualVersion": "B62批次 ext-a/ext-d 双版本对偶归并组（涉及逻辑条数822口径）",
+      "project": "单发所属项目代号"
+    },
+    "numbers": [
+      {
+        "数": "146",
+        "含义": "条目位总数",
+        "口径": "48条目卡+98单发（正本覆盖对账表合计行）；即本文件 entries 数组长度"
+      },
+      {
+        "数": "835",
+        "含义": "通用教训行数",
+        "口径": "通用清单层定稿口径；另有4条项目专属教训不入本集，835+4=839"
+      },
+      {
+        "数": "839",
+        "含义": "全库确认错误总数",
+        "口径": "8批次盲审+返修+对账后确认（发现渠道：414+348+56+21=839）"
+      },
+      {
+        "数": "822",
+        "含义": "逻辑条数",
+        "口径": "B62批次 ext-a/ext-d 双版本34行归并折叠：12组25行归并为卡内条目+9条单列=21逻辑条目，835−13=822；本数据集按835物理行组织，涉及对偶条目在 entry.dualVersion 标注"
+      },
+      {
+        "数": "48",
+        "含义": "条目卡数",
+        "口径": "A7/B5/C3/D4/E6/F3/G3/H5/I6/Z6=48"
+      },
+      {
+        "数": "98",
+        "含义": "单发条数",
+        "口径": "A5/D9/E42/H6/I32/Z4=98"
+      },
+      {
+        "数": "737",
+        "含义": "卡内教训行数",
+        "口径": "737+98=835"
+      },
+      {
+        "数": "414",
+        "含义": "用户(owner)当时亲手纠出条数",
+        "口径": "占49.3%（414+425=839闭合）；387/411为历史口径，现行一律414"
+      },
+      {
+        "数": "425",
+        "含义": "当时没被发现的条数",
+        "口径": "348事后挖掘+56AI自查+21另一审核AI=425"
+      },
+      {
+        "数": "9/131/314/385",
+        "含义": "全库severity分布",
+        "口径": "blocker9/high131/medium314/low385，合计839"
+      },
+      {
+        "数": "45",
+        "含义": "全库待终审旗标(⚑)条数",
+        "口径": "登记口径=32卡内+13单发；本数据集内旗标条目数见 meta.flagCount"
+      },
+      {
+        "数": "824",
+        "含义": "历史会话总数",
+        "口径": "档案登记值（约824个），源数据在排除区未打开，仅登记量级"
+      }
+    ],
+    "flagCount": 45,
+    "categoryStats": {
+      "A": {
+        "name": "假完成/没验证",
+        "lessons": 158,
+        "share": 18.9,
+        "cards": 7,
+        "cardLessons": 153,
+        "singles": 5
+      },
+      "B": {
+        "name": "文件/数据搞坏",
+        "lessons": 28,
+        "share": 3.4,
+        "cards": 5,
+        "cardLessons": 28,
+        "singles": 0
+      },
+      "C": {
+        "name": "交付物生成缺陷",
+        "lessons": 18,
+        "share": 2.2,
+        "cards": 3,
+        "cardLessons": 18,
+        "singles": 0
+      },
+      "D": {
+        "name": "数字/口径错",
+        "lessons": 124,
+        "share": 14.9,
+        "cards": 4,
+        "cardLessons": 115,
+        "singles": 9
+      },
+      "E": {
+        "name": "猜测当结论",
+        "lessons": 171,
+        "share": 20.5,
+        "cards": 6,
+        "cardLessons": 129,
+        "singles": 42
+      },
+      "F": {
+        "name": "引用/来源有假",
+        "lessons": 13,
+        "share": 1.6,
+        "cards": 3,
+        "cardLessons": 13,
+        "singles": 0
+      },
+      "G": {
+        "name": "工具用法错",
+        "lessons": 93,
+        "share": 11.1,
+        "cards": 3,
+        "cardLessons": 93,
+        "singles": 0
+      },
+      "H": {
+        "name": "理解偏差/指令遵循",
+        "lessons": 112,
+        "share": 13.4,
+        "cards": 5,
+        "cardLessons": 106,
+        "singles": 6
+      },
+      "I": {
+        "name": "流程失控/无效循环",
+        "lessons": 102,
+        "share": 12.2,
+        "cards": 6,
+        "cardLessons": 70,
+        "singles": 32
+      },
+      "Z": {
+        "name": "长尾杂项",
+        "lessons": 16,
+        "share": 1.9,
+        "cards": 6,
+        "cardLessons": 12,
+        "singles": 4
+      }
+    }
+  },
+  "categories": [
+    {
+      "name": "假完成/没验证",
+      "lessons": 158,
+      "share": 18.9,
+      "cards": 7,
+      "cardLessons": 153,
+      "singles": 5
+    },
+    {
+      "name": "文件/数据搞坏",
+      "lessons": 28,
+      "share": 3.4,
+      "cards": 5,
+      "cardLessons": 28,
+      "singles": 0
+    },
+    {
+      "name": "交付物生成缺陷",
+      "lessons": 18,
+      "share": 2.2,
+      "cards": 3,
+      "cardLessons": 18,
+      "singles": 0
+    },
+    {
+      "name": "数字/口径错",
+      "lessons": 124,
+      "share": 14.9,
+      "cards": 4,
+      "cardLessons": 115,
+      "singles": 9
+    },
+    {
+      "name": "猜测当结论",
+      "lessons": 171,
+      "share": 20.5,
+      "cards": 6,
+      "cardLessons": 129,
+      "singles": 42
+    },
+    {
+      "name": "引用/来源有假",
+      "lessons": 13,
+      "share": 1.6,
+      "cards": 3,
+      "cardLessons": 13,
+      "singles": 0
+    },
+    {
+      "name": "工具用法错",
+      "lessons": 93,
+      "share": 11.1,
+      "cards": 3,
+      "cardLessons": 93,
+      "singles": 0
+    },
+    {
+      "name": "理解偏差/指令遵循",
+      "lessons": 112,
+      "share": 13.4,
+      "cards": 5,
+      "cardLessons": 106,
+      "singles": 6
+    },
+    {
+      "name": "流程失控/无效循环",
+      "lessons": 102,
+      "share": 12.2,
+      "cards": 6,
+      "cardLessons": 70,
+      "singles": 32
+    },
+    {
+      "name": "长尾杂项",
+      "lessons": 16,
+      "share": 1.9,
+      "cards": 6,
+      "cardLessons": 12,
+      "singles": 4
+    }
+  ],
+  "entries": [
+    {
+      "entryType": "card",
+      "id": "A-1",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "未生成/未写入/未动作即宣称完成",
+      "workpoint": "todo空转翻completed、写失败未核验、改内存未写盘、结果没写入输出表、只应答不动手、未回读产物",
+      "symptom": "宣称完成，但产物为0字节/未写盘/动作从未发生，打开才发现",
+      "correctPractice": "写入/生成后立即回读产物（打开核内容、数行数、验首尾）；todo只在有产物证据后翻completed",
+      "caseStudy": {
+        "sourceId": "B3:d40cf700:E04",
+        "text": "「计算说明」sheet用临时脚本追加未固化进构建脚本，两轮重跑静默丢失，报告过「已入表」实为没有"
+      },
+      "lessonCount": 19,
+      "sourceIds": [
+        "B3:d40cf700:E04",
+        "B4:a60aea7e:E01",
+        "B4:a60aea7e:E06",
+        "B4:1ea960b0:E01",
+        "B5a:a564ca30:E02",
+        "B5a:ses_4358:E01",
+        "B5a:ses_440a:E01",
+        "B5a:ses_4683:E01",
+        "B5a:a13425ca:E03",
+        "B5a:a13425ca:E04",
+        "B5b:ses_464ca0af:E04",
+        "B5b:ses_4723:E01",
+        "B61:44ee0dee4f:E02",
+        "B61:45f356fd8f:E01",
+        "B61:45f356fd8f:E06",
+        "B62:8e96109f:E09",
+        "B62:434c62:E14",
+        "B62:b02f68c9:E02",
+        "B63:075d1b08:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B61:45f356fd8f:E06",
+          "flags": [
+            "置信/复核待议",
+            "待owner终审"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-2",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "覆盖面/全量宣称失实",
+      "workpoint": "宣称全部/清理完/盘点完，实际漏项、批处理中断漏份、抽样或单根当全量、同名覆盖、交付包不完整",
+      "symptom": "宣称全部/清理完/盘点完，实际漏文件漏份漏节点，覆盖面对不上",
+      "correctPractice": "「全部」出口前必须有对账动作（清单数vs磁盘数、源集vs产物集diff），差值显式解释",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E06",
+        "text": "宣称17个产品全部提取完成，连环暴露漏主料/幽灵行，「完整准确可靠」判定同被证伪"
+      },
+      "lessonCount": 30,
+      "sourceIds": [
+        "B2:ee9d1441:E06",
+        "B2:ee9d1441:E07",
+        "B2:ee9d1441:E08",
+        "B2:23425f6b:E03",
+        "B2:81fec0b1:E05",
+        "B2:ee6ad45b:E01",
+        "B2:02b722ad:E02",
+        "B3:ae82a305:E02",
+        "B3:fb29060a:E01",
+        "B4:a0cdec8f:E01",
+        "B4:74bf95fd:E03",
+        "B4:ab95f7c6:E01",
+        "B4:f95bd88d:E02",
+        "B5a:07da144a:E01",
+        "B5a:a13425ca:E05",
+        "B5b:session-7c57479a:E01",
+        "B61:44ecb5570f:E02",
+        "B61:b59227:E07",
+        "B61:46318d3b3f:E01",
+        "B61:45f356fd8f:E02",
+        "B61:46efa5dbdf:E02",
+        "B61:37d49f7a:E01",
+        "B62:3f47a3cb:E02",
+        "B62:3f47a3cb:E07",
+        "B62:3f47a3cb:E12",
+        "B62:8e96109f:E02",
+        "B62:42b5642f:E01",
+        "B62:2b9dcec8:E04",
+        "B62:3f47a3cb:D07",
+        "B62:3f47a3cb:D13"
+      ],
+      "dualVersion": [
+        {
+          "组": "双6",
+          "ids": [
+            "B62:3f47a3cb:E07",
+            "B62:3f47a3cb:D07"
+          ]
+        },
+        {
+          "组": "双9",
+          "ids": [
+            "B62:3f47a3cb:E02",
+            "B62:3f47a3cb:D13"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-3",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "验证方法无效仍宣布通过",
+      "workpoint": "错误命令判等、行数抽样当全量、单层单维验证、校验对语义盲、报错/空输出照写通过、mock当真实、告警在场未处置",
+      "symptom": "验证打了勾但方法抓不住这类错，报错/告警在场仍宣布通过",
+      "correctPractice": "验证设计先自问「此法真能抓住这类错吗」；告警/报错必须处置或显式挂账，不许带信号宣布通过",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E10",
+        "text": "去掉DC过滤矫枉过正，分销sheet混入错类脏行，验证报告标红未处置仍宣告提取+验证全部完成"
+      },
+      "lessonCount": 35,
+      "sourceIds": [
+        "B2:ee9d1441:E10",
+        "B2:ee9d1441:E13",
+        "B2:88091aff:E01",
+        "B3:d40cf700:E08",
+        "B3:fb29060a:E17",
+        "B3:fb29060a:E19",
+        "B3:261e44d8:E03",
+        "B3:ses_4631:E03",
+        "B4:3ae46839:E02",
+        "B5a:049663a9:E01",
+        "B5a:07da144a:E24",
+        "B5a:062a227c:E01",
+        "B5a:a13425ca:E01",
+        "B5b:session-7c57479a:E04",
+        "B5b:session-7c57479a:E06",
+        "B61:44ee0dee4f:E01",
+        "B61:46ecb4df8f:E01",
+        "B61:46f22090ff:E01",
+        "B61:472173865f:E01",
+        "B61:4727d074bf:E01",
+        "B61:5a0f0f84:E03",
+        "B62:3f47a3cb:E01",
+        "B62:3f47a3cb:E08",
+        "B62:8e96109f:E01",
+        "B62:42b5642f:E02",
+        "B62:444770e1:E01",
+        "B62:7a7a84aa:E01",
+        "B62:8ddee7b5:E01",
+        "B62:8ddee7b5:E02",
+        "B62:8ddee7b5:E06",
+        "B62:8ddee7b5:E10",
+        "B62:3f47a3cb:D01",
+        "B62:3f47a3cb:D02",
+        "B62:3f47a3cb:D06",
+        "B63:6f4e7414:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B2:88091aff:E01",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ],
+      "dualVersion": [
+        {
+          "组": "双1",
+          "ids": [
+            "B62:3f47a3cb:E01",
+            "B62:3f47a3cb:D01",
+            "B62:3f47a3cb:D02"
+          ]
+        },
+        {
+          "组": "双5",
+          "ids": [
+            "B62:3f47a3cb:E08",
+            "B62:3f47a3cb:D06"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-4",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "修复/整改宣称完成实未落地或引入新缺陷",
+      "workpoint": "两次声称修复旧数残留、修复引入静默失败、批内只修一份、修复后不做传播检查",
+      "symptom": "说修好了，旧症状仍在、只修了一份、或修出新毛病",
+      "correctPractice": "修复完成必须复验原症状+周边传播面（同文档同款、下游引用、同类其余份），引入变更需回归",
+      "caseStudy": {
+        "sourceId": "B3:fb29060a:E15",
+        "text": "三报告整改声称✅全部整改v2定版，总审实证真实落地率仅R1 5/12、R2 5/13、R3 9/15"
+      },
+      "lessonCount": 17,
+      "sourceIds": [
+        "B3:fb29060a:E15",
+        "B4:a60aea7e:E04",
+        "B4:81874203:E02",
+        "B5b:ses_464ca0af:E02",
+        "B5b:session-7c57479a:E03",
+        "B61:b59227:E02",
+        "B61:4727d074bf:E02",
+        "B61:4729fd4c1f:E01",
+        "B61:5a0f0f84:E04",
+        "B62:8e96109f:E06",
+        "B62:434c62:E06",
+        "B62:434c62:E07",
+        "B62:434c62:E12",
+        "B62:434c62:E21",
+        "B62:2b9dcec8:E01",
+        "B63:ses_45fb3cdbcf:E01",
+        "B63:ses_4631c5e83f:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-5",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "可用性/生效性/状态宣称未实测",
+      "workpoint": "「已可用/已生效/已修复/已卸载/已更新/在跑」未跑一次真实使用，或宣称缺稿内证据",
+      "symptom": "可用/已生效/已更新/在跑，实际没跑过一次真实使用或无证据",
+      "correctPractice": "状态语只能出自一次真实使用/连接/运行的成功证据；无证据只许写「待验证」",
+      "caseStudy": {
+        "sourceId": "B2:959a0453:E01",
+        "text": "导入10会话tool消息未配对生成畸形part，宣称「可见可浏览」未经验证，用户实测十个会话全崩"
+      },
+      "lessonCount": 34,
+      "sourceIds": [
+        "B2:959a0453:E01",
+        "B2:959a0453:E02",
+        "B3:ses_4408:E02",
+        "B3:d40cf700:E02",
+        "B3:ses_4682:E01",
+        "B4:0b27b521:E01",
+        "B4:0b27b521:E02",
+        "B4:0e1d7756:E05",
+        "B4:9ffbd355:E06",
+        "B5a:2bfe4f26:E02",
+        "B5a:ses_3f89:E03",
+        "B5a:c075f854:E08",
+        "B5a:c29561e3:E01",
+        "B5a:ses_4730:E04",
+        "B5b:sess_78a289f3:E02",
+        "B5b:ses_464ca0af:E01",
+        "B5b:session-7c57479a:E02",
+        "B5b:ses_3fdc:E01",
+        "B5b:ses_46f2ef0d:E01",
+        "B61:44ecb5570f:E01",
+        "B61:44f69cbdcf:E02",
+        "B61:46e9b39ecf:E01",
+        "B61:46d9d50f7f:E01",
+        "B61:46efa5dbdf:E01",
+        "B61:9e75ec:E01",
+        "B62:3f47a3cb:E03",
+        "B62:3f47a3cb:E05",
+        "B62:8ddee7b5:E05",
+        "B62:2c329100:E05",
+        "B62:3f47a3cb:D04",
+        "B62:3f47a3cb:D08",
+        "B63:c8ccddcc:E03",
+        "B63:de081c34:E02",
+        "B63:session-b92167:E05"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B5b:ses_46f2ef0d:E01",
+          "flags": [
+            "源标待议",
+            "终审复核/可裁"
+          ]
+        },
+        {
+          "id": "B61:44f69cbdcf:E02",
+          "flags": [
+            "置信/复核待议",
+            "待回源核实"
+          ]
+        },
+        {
+          "id": "B61:46d9d50f7f:E01",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B63:c8ccddcc:E03",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B63:session-b92167:E05",
+          "flags": [
+            "置信/复核待议",
+            "待owner终审"
+          ]
+        }
+      ],
+      "dualVersion": [
+        {
+          "组": "双3",
+          "ids": [
+            "B62:3f47a3cb:E05",
+            "B62:3f47a3cb:D04"
+          ]
+        },
+        {
+          "组": "双7",
+          "ids": [
+            "B62:3f47a3cb:E03",
+            "B62:3f47a3cb:D08"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-6",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "对外交付合规/残留宣称失实",
+      "workpoint": "宣称无内部痕迹/已脱敏/可提交，实有泄露面；对外材料含不实陈述",
+      "symptom": "交付宣称干净可提交，内部痕迹/敏感信息/不实陈述漏网",
+      "correctPractice": "对外提交前跑独立残留扫描（关键词、元数据、二进制、图片像素层），残留=0才可宣称合规",
+      "caseStudy": {
+        "sourceId": "B3:fb29060a:E18",
+        "text": "「内部痕迹0」检查结论失实，扩充关键词后9份交付文件扫出26处内部用语逐一清理"
+      },
+      "lessonCount": 7,
+      "sourceIds": [
+        "B3:fb29060a:E18",
+        "B62:8e96109f:E07",
+        "B62:8e96109f:E08",
+        "B62:38bf099a:E01",
+        "B62:38bf099a:E02",
+        "B62:c6f301:E01",
+        "B62:c6f301:E02"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "A-7",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "title": "总结/数字与产物实况不符",
+      "workpoint": "完成度、数量、口径在总结里虚标，与磁盘实况、自报通过率、刚跑出的数字矛盾",
+      "symptom": "总结的完成度/数量与磁盘实况、自己刚跑出的数字对不上",
+      "correctPractice": "总结数字必须来自当轮实测输出并逐一对账，禁用记忆值和旧口径",
+      "caseStudy": {
+        "sourceId": "B3:ses_4631:E01",
+        "text": "报「通过率93.8%」与明细9✓+6⚠+1✗自相矛盾未对账即转发，隐瞒审核崩溃，6文件19问题被计入通过"
+      },
+      "lessonCount": 11,
+      "sourceIds": [
+        "B3:ses_4631:E01",
+        "B5a:8dc1f7db:E06",
+        "B5a:b3f39423:E02",
+        "B61:46f041c0ff:E01",
+        "B61:46f22090ff:E02",
+        "B61:46318d3b3f:E03",
+        "B61:c336b2:E01",
+        "B61:46f0e13f8f:E01",
+        "B61:4727d074bf:E03",
+        "B62:8ddee7b5:E03",
+        "B62:2c329100:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "A-S1",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "project": "P3",
+      "lesson": "3.4-5.7小时批处理用前台裸跑无nohup，约600秒进程即死，死后仍报「已开始进度5/204」",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:ses_4631:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "A-S2",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "project": "P7",
+      "lesson": "改用户级settings后即宣告「配置已生效」，仅JSON语法校验，实际项目级配置优先级更高修改无效",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:10565791:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "A-S3",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "project": "P7",
+      "lesson": "把关闭TLS校验写入用户配置当「修复」并宣告✅不会再报错，无任何连接测试佐证",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:ses_46d6:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "A-S4",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "project": "P7",
+      "lesson": "宣称「已卸载（包括配置文件）」但稿内仅npm remove输出无配置删除证据，用户key被原样回显",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:ses_46d6:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "A-S5",
+      "category": "A",
+      "categoryName": "假完成/没验证",
+      "project": "P8",
+      "lesson": "能力总结把未实测服务列「可访问」并称「权限已配置」，失败接口静默略过误导后续调用",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:46ef29f2ef:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "B-1",
+      "category": "B",
+      "categoryName": "文件/数据搞坏",
+      "title": "旧窗口/并发写覆盖新版本",
+      "workpoint": "旧窗口保存、/tmp共享路径、Excel未关覆盖写回，新版被旧版吞掉",
+      "symptom": "旧窗口保存/并发写回，新版被旧版吞掉",
+      "correctPractice": "写共享/同路径文件前检查占用与旧副本；用户打开着的文件先提示关闭，写前备份",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E11",
+        "text": "共用/tmp路径致脚本被后台agent覆写、备份同毁，10项修复全丢被迫重建"
+      },
+      "lessonCount": 3,
+      "sourceIds": [
+        "B2:ee9d1441:E11",
+        "B3:d40cf700:E01",
+        "B5a:8dc1f7db:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "B-2",
+      "category": "B",
+      "categoryName": "文件/数据搞坏",
+      "title": "清洗/写管线污染下游数据表",
+      "workpoint": "自创格式、假主键、错bucket、误报写入，权威表被批量脏数据污染",
+      "symptom": "清洗结果带病入表，数十万行脏数据污染下游权威表",
+      "correctPractice": "清洗写入先小批量试写并按消费端schema校验，主键/格式/目标bucket三方核对后再全量",
+      "caseStudy": {
+        "sourceId": "B5a:07da144a:E02",
+        "text": "清洗写入格式未对齐平台消费端约定，自创嵌套格式致Iceberg表被污染86万行脏数据、平台两次清表"
+      },
+      "lessonCount": 5,
+      "sourceIds": [
+        "B5a:07da144a:E02",
+        "B5a:07da144a:E03",
+        "B5a:07da144a:E04",
+        "B5a:07da144a:E06",
+        "B5a:07da144a:E11"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "B-3",
+      "category": "B",
+      "categoryName": "文件/数据搞坏",
+      "title": "破坏性改写/格式破坏搞坏好文件",
+      "workpoint": "整文件覆盖丢列、只读首sheet写回、merge膨胀、正则误伤注入、删引用改坏docx/html",
+      "symptom": "就地改写/覆盖/删引用，好端端的文件被打不开或丢内容",
+      "correctPractice": "改前备份；就地改写改用「新文件+校验+原子替换」；破坏性操作后必须回读打开验证",
+      "caseStudy": {
+        "sourceId": "B3:fb29060a:E22",
+        "text": "R2整改删孤儿图未清rels引用把docx改坏打不开，而同日R1刚用过正确的zip层清理方法"
+      },
+      "lessonCount": 10,
+      "sourceIds": [
+        "B3:fb29060a:E22",
+        "B4:a0cdec8f:E02",
+        "B4:edc273cd:E02",
+        "B4:52617f57:E01",
+        "B4:52617f57:E02",
+        "B4:79379183:E01",
+        "B4:e0da5b5b:E02",
+        "B4:74bf95fd:E06",
+        "B61:5a0f0f84:E02",
+        "B63:6f4e7414:E03"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "B-4",
+      "category": "B",
+      "categoryName": "文件/数据搞坏",
+      "title": "误删/截断/覆盖基线（不可逆操作毁数据）",
+      "workpoint": "rm误删目录、就地读写截断源文件、强杀与覆盖用户手改基线、共享系统无隔离实验",
+      "symptom": "rm/截断/强杀/无隔离实验，数据与系统被不可逆搞坏",
+      "correctPractice": "rm/截断/强杀前二次确认目标路径并留副本；客户/生产系统禁止无隔离实验",
+      "caseStudy": {
+        "sourceId": "B62:3f47a3cb:E04",
+        "text": "最小验证包导入失败后在共享客户系统继续排查，致在用系统数据打不开（软件被搞坏），修复耗多轮"
+      },
+      "lessonCount": 9,
+      "sourceIds": [
+        "B62:3f47a3cb:E04",
+        "B62:434c62:E05",
+        "B62:2ee804:E05",
+        "B62:2ee804:E07",
+        "B62:2ee804:E12",
+        "B62:3f47a3cb:D03",
+        "B63:c412890f:E01",
+        "B63:session-b92167:E02",
+        "B63:ses_45fb3cdbcf:E07"
+      ],
+      "dualVersion": [
+        {
+          "组": "双2",
+          "ids": [
+            "B62:3f47a3cb:E04",
+            "B62:3f47a3cb:D03"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "B-5",
+      "category": "B",
+      "categoryName": "文件/数据搞坏",
+      "title": "在用资产误判可处置",
+      "workpoint": "未查使用证据把在用环境列入删除清单",
+      "symptom": "在用环境被当死资产列入处置",
+      "correctPractice": "处置任何资产前先查使用证据（引用、近期运行、依赖方）",
+      "caseStudy": {
+        "sourceId": "B5a:ses_421e:E01",
+        "text": "未检索使用证据即把在用的Agentic_test环境列入删除清单获勾选，skill文档化运行路径失效"
+      },
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:ses_421e:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "C-1",
+      "category": "C",
+      "categoryName": "交付物生成缺陷",
+      "title": "显示/排版/链接可访问性缺陷",
+      "workpoint": "列宽遮挡、新列屏幕外、链接指向不存在文件、图表不显示、视觉混淆、比例失真",
+      "symptom": "交付物显示层面坏：遮挡、屏幕外、死链、图不显示",
+      "correctPractice": "交付前在目标环境实际打开渲染一遍（列宽、可见区、链接逐个点）",
+      "caseStudy": {
+        "sourceId": "B3:ae82a305:E06",
+        "text": "Excel列宽按字符数计算未计中文双宽，层级/名称字段大量遮挡显示不全，用户要求返工"
+      },
+      "lessonCount": 7,
+      "sourceIds": [
+        "B3:ae82a305:E06",
+        "B4:10fb1bad:E03",
+        "B4:a0cdec8f:E05",
+        "B4:a0cdec8f:E08",
+        "B4:f95bd88d:E01",
+        "B62:8e96109f:E05",
+        "B62:05466b8e:E02"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "C-2",
+      "category": "C",
+      "categoryName": "交付物生成缺陷",
+      "title": "交付包结构缺陷",
+      "workpoint": "exchange ID撞车、provider悬空包外、导出丢图、公式无缓存值、分母引空单元格、列语义错位",
+      "symptom": "交付包结构缺陷：ID撞车、provider悬空、丢图、坏公式",
+      "correctPractice": "包导出后做完整性校验（ID唯一、引用可达、图随包、公式带缓存值）",
+      "caseStudy": {
+        "sourceId": "B3:d40cf700:E06",
+        "text": "建因子库sheet时地理列错填进来源列、DQ错填进地理列，三列语义全错被用户一眼看出"
+      },
+      "lessonCount": 8,
+      "sourceIds": [
+        "B3:d40cf700:E06",
+        "B62:8cf0e297:E02",
+        "B62:8cf0e297:E03",
+        "B62:8cf0e297:E04",
+        "B62:434c62:E11",
+        "B62:434c62:E15",
+        "B62:ffd50d:E01",
+        "B62:ffd50d:E02"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "C-3",
+      "category": "C",
+      "categoryName": "交付物生成缺陷",
+      "title": "图形呈现引导错误解读",
+      "workpoint": "误导性箭头/标签、排序违和、数量级缩放后标签失真",
+      "symptom": "图形元素引导错误解读",
+      "correctPractice": "图形以「读者会怎么解读」自检，排序/比例/标注与数据语义对齐",
+      "caseStudy": {
+        "sourceId": "B61:b59227:E04",
+        "text": "泵与CDU间残留红色短箭头被读作「泵给CDU供热水」，确认误导后删除并改立管起点"
+      },
+      "lessonCount": 3,
+      "sourceIds": [
+        "B61:b59227:E04",
+        "B63:session-d6089f:E03",
+        "B63:session-d6089f:E04"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "D-1",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "title": "计数/合计/换算错（重算可发现）",
+      "workpoint": "分项和≠总数、心算/凭记忆算错、系数漏乘、口径相减、漏扫计数错",
+      "symptom": "合计≠分项、计数漂移、系数漏乘，复算即穿帮",
+      "correctPractice": "任何合计/计数出口跑「分项和=总数」自动断言；换算系数写进代码不留心算",
+      "caseStudy": {
+        "sourceId": "B4:a60aea7e:E07",
+        "text": "收资计数4次漂移（8→7→3→9），6+7=13≠15被用户抓包『我数错了』"
+      },
+      "lessonCount": 36,
+      "sourceIds": [
+        "B4:a60aea7e:E07",
+        "B4:a60aea7e:E08",
+        "B4:0b27b521:E05",
+        "B4:a576c024:E01",
+        "B5a:c9f10751:E02",
+        "B5a:edb8594d:E01",
+        "B5a:edb8594d:E02",
+        "B5a:ses_43f8:E04",
+        "B5a:062a227c:E04",
+        "B5a:0ce4d5d8:E03",
+        "B5a:0ce4d5d8:E04",
+        "B5a:4b9ddb40:E01",
+        "B5a:c075f854:E05",
+        "B5a:c075f854:E09",
+        "B5a:c075f854:E10",
+        "B5a:648b265b:E01",
+        "B5a:a13425ca:E10",
+        "B5b:sess_700:E02",
+        "B61:46ef29f2ef:E02",
+        "B61:b59227:E06",
+        "B61:b59227:E13",
+        "B61:b59227:E14",
+        "B61:44ebfec18f:E02",
+        "B61:450595084f:E03",
+        "B61:46e078b68f:E03",
+        "B61:45e8edb0ff:E04",
+        "B61:37d49f7a:E05",
+        "B61:5a0f0f84:E01",
+        "B62:42afa914:E03",
+        "B62:2ee804:E09",
+        "B63:4908ecbd:E01",
+        "B63:8f0f54fe:E02",
+        "B63:8f0f54fe:E03",
+        "B63:session-d6089f:E02",
+        "B63:session-d6089f:E05",
+        "B63:ses_45fb3cdbcf:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "D-2",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "title": "口径/分母/维度/单位/选型错用",
+      "workpoint": "口径混用、标签近似当精确、量纲混装、边界漏项、因子/品类选错、假设自斥",
+      "symptom": "分母/边界/量纲/选型用错，数字系统性偏",
+      "correctPractice": "口径三问：分母是什么、边界含哪些、单位量纲一致吗；双口径并存必须显式声明取舍",
+      "caseStudy": {
+        "sourceId": "B2:3aa8c6ee:E02",
+        "text": "用户问有多少产品答12个（待匹配口径），实际16个，批量任务按错数建立后被用户否定"
+      },
+      "lessonCount": 36,
+      "sourceIds": [
+        "B2:3aa8c6ee:E02",
+        "B3:fb29060a:E07",
+        "B3:fb29060a:E09",
+        "B3:fb29060a:E10",
+        "B3:fb29060a:E11",
+        "B4:66b07fdb:E01",
+        "B4:66b07fdb:E03",
+        "B4:66b07fdb:E06",
+        "B4:7a5b3346:E03",
+        "B4:a0cdec8f:E03",
+        "B4:81874203:E04",
+        "B4:a927e05c:E01",
+        "B4:a927e05c:E02",
+        "B4:4483565d:E02",
+        "B4:d1e54fee:E02",
+        "B4:14e83c8d:E01",
+        "B4:364cc4cb:E02",
+        "B4:3a21781f:E02",
+        "B5a:ses_4730:E02",
+        "B5a:6ec17765:E01",
+        "B5a:8dc1f7db:E07",
+        "B61:d3032bee:E05",
+        "B61:471a9c930f:E02",
+        "B61:9a5b2c:E01",
+        "B61:9a5b2c:E02",
+        "B62:78039aee:E01",
+        "B62:226ebb78:E01",
+        "B62:434c62:E09",
+        "B62:42afa914:E02",
+        "B62:2ee804:E11",
+        "B62:3f47a3cb:D17",
+        "B63:1be3e8f1:E02",
+        "B63:1be3e8f1:E03",
+        "B63:27257fcd:E04",
+        "B63:17670dda:E01",
+        "B63:session-d6089f:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B4:81874203:E04",
+          "flags": [
+            "专属边界留痕"
+          ]
+        },
+        {
+          "id": "B4:364cc4cb:E02",
+          "flags": [
+            "专属边界留痕"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "D-3",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "title": "多口径并存未收敛/凭记忆转写失实/旧值残留",
+      "workpoint": "同一指标两说未收敛、凭记忆重排数字、转写错、旧版本值/描述残留未回改",
+      "symptom": "同一指标多口径并存、凭记忆写数、旧值残留未回改",
+      "correctPractice": "数字只用当轮实测值；改口/勘误后全文档回搜旧值；多源数字冲突先收敛再交付",
+      "caseStudy": {
+        "sourceId": "B2:f85c69fd:E01",
+        "text": "某门店电耗强度前后两答1.10与0.94不一致且改值无说明，1.10无法从已展示数据复现"
+      },
+      "lessonCount": 37,
+      "sourceIds": [
+        "B2:f85c69fd:E01",
+        "B2:f85c69fd:E02",
+        "B3:ses_4682:E02",
+        "B4:2f542074:E01",
+        "B4:edc273cd:E05",
+        "B4:sess_7ac:E03",
+        "B5a:07da144a:E14",
+        "B5a:2bfe4f26:E03",
+        "B5a:ses_43f8:E02",
+        "B5a:062a227c:E05",
+        "B5a:648b265b:E02",
+        "B5a:ses_440a:E02",
+        "B5a:ses_4683:E02",
+        "B5a:8dc1f7db:E04",
+        "B5a:a13425ca:E08",
+        "B5a:a13425ca:E09",
+        "B5b:sess_a23e5439:E02",
+        "B5b:session-7c57479a:E08",
+        "B5b:sess_d60:E01",
+        "B5b:sess_270:E01",
+        "B5b:sess_700:E01",
+        "B5b:ses_3fdc:E03",
+        "B5b:ses_4689:E01",
+        "B61:44ee0dee4f:E03",
+        "B61:b59227:E05",
+        "B61:b59227:E11",
+        "B61:b59227:E12",
+        "B61:45f356fd8f:E04",
+        "B62:8e96109f:E03",
+        "B62:434c62:E10",
+        "B62:b5e797:E01",
+        "B63:6f4e7414:E10",
+        "B63:6f4e7414:E13",
+        "B63:c5d3ae74:E03",
+        "B63:c5d3ae74:E06",
+        "B63:799cf9fa:E01",
+        "B63:ses_45fb3cdbcf:E03"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B5b:sess_270:E01",
+          "flags": [
+            "源标待议",
+            "终审复核/可裁"
+          ]
+        },
+        {
+          "id": "B61:44ee0dee4f:E03",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B62:b5e797:E01",
+          "flags": [
+            "待owner终审"
+          ]
+        },
+        {
+          "id": "B63:ses_45fb3cdbcf:E03",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "D-4",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "title": "数字呈现误导/掩盖",
+      "workpoint": "降级warning、跳过0/0标100%、星级与结果错位、表述致误解",
+      "symptom": "呈现层软化掩盖真实状态",
+      "correctPractice": "呈现层不做软化：失败就是失败，掩盖性标注（100%、星级、部分在线）禁止",
+      "caseStudy": {
+        "sourceId": "B4:0e1d7756:E04",
+        "text": "0台在线仍标『部分在线(0/N)』语义误导，3轮追问+1轮返工才改口径"
+      },
+      "lessonCount": 6,
+      "sourceIds": [
+        "B4:0e1d7756:E04",
+        "B4:e0da5b5b:E01",
+        "B4:00db48d9:E01",
+        "B5b:ses_464ca0af:E03",
+        "B61:450595084f:E02",
+        "B62:434c62:E19"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S1",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P5",
+      "lesson": "阈值重算未联动重合天数列，398家级联脏数据（交集>子集）留存V3草稿表",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:81874203:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S2",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P5",
+      "lesson": "故障码分析HTML第1页与第2页同指标数字不一致（123vs143等），仅建议以第2页为准",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:364cc4cb:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S3",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P5",
+      "lesson": "总览文字689家vs总表688行vs30格图686家，三个总数并存用户被搞混",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:74bf95fd:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S4",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P6",
+      "lesson": "源Excel删3行后重跑得486与既有489并存，未主动对账基线漂移，用户质疑后才核实",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:c075f854:E06"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S5",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P6",
+      "lesson": "当天1月10日仍把已过2-3天的日程高亮为「近期重要日程」，未来7天无安排的关键事实被埋没",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:ses_45a5:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S6",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P6",
+      "lesson": "一期路线从「数据不出厂」反转为「全量上传」却当措辞修正，未声明架构级推荐变更",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:6ec17765:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S7",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P6",
+      "lesson": "无人机不在采购清单却被收3年半流量费1.55万（高于150个网关合计），报价与交付不对应",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:8dc1f7db:E10"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S8",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P8",
+      "lesson": "覆盖率报告称「只有CT_3有24h数据」，又把CT_3列入无数据清单，自相矛盾",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:46e9b39ecf:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "D-S9",
+      "category": "D",
+      "categoryName": "数字/口径错",
+      "project": "P13",
+      "lesson": "作业指导书把S0清洗塞进『工具经验』，环节顺序与POC真实流水线不符，用户两轮贴原文指出才重排",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:6f4e7414:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-1",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "负结论/穷尽断言未实证",
+      "workpoint": "「没有/不存在/无法/全网空白/无此能力」查无实证或检索面不足即断言",
+      "symptom": "断言「没有/不存在/无法」，检索面撑不起结论",
+      "correctPractice": "负结论必须报告检索面（查了哪几处、凭什么算穷尽）；低成本低处先查完再说话",
+      "caseStudy": {
+        "sourceId": "B3:ae82a305:E01",
+        "text": "未查文档即断言OpenAPI已穷尽是接口能力边界，盲猜40+个action全败，用户提示后才找到正解接口"
+      },
+      "lessonCount": 23,
+      "sourceIds": [
+        "B3:ae82a305:E01",
+        "B4:a0cdec8f:E06",
+        "B4:1a2def4f:E02",
+        "B4:1b58da0e:E01",
+        "B5a:07da144a:E07",
+        "B5a:ses_4449:E01",
+        "B5a:8dc1f7db:E03",
+        "B5b:sess_9aa0525c:E01",
+        "B5b:sess_302:E01",
+        "B5b:ses_46dd:E01",
+        "B5b:1f031125:E01",
+        "B61:46e9b39ecf:E02",
+        "B61:46e2a7ec3f:E01",
+        "B61:9e75ec:E04",
+        "B61:37d49f7a:E06",
+        "B61:37d49f7a:E07",
+        "B62:434c62:E04",
+        "B62:b02f68c9:E04",
+        "B62:b02f68c9:E05",
+        "B62:05466b8e:E07",
+        "B63:932cd9dd:E01",
+        "B63:27257fcd:E01",
+        "B63:2e8e6383:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B5b:sess_302:E01",
+          "flags": [
+            "源标待议",
+            "终审复核/可裁"
+          ]
+        },
+        {
+          "id": "B5b:ses_46dd:E01",
+          "flags": [
+            "源标待议",
+            "终审复核/可裁"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-2",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "单点/单环境/短窗外推成普遍",
+      "workpoint": "n=1、前几条、单探针、单环境实测即下通用结论，外推偏差未声明",
+      "symptom": "一个样本/单环境就下普遍结论",
+      "correctPractice": "n<3不下普遍结论；单环境结论强制标注「单环境未泛化」",
+      "caseStudy": {
+        "sourceId": "B4:1a2def4f:E04",
+        "text": "看前几条全是gap即断言『新格式Wh全是异常』，实测99.8%为正常值"
+      },
+      "lessonCount": 13,
+      "sourceIds": [
+        "B4:1a2def4f:E04",
+        "B4:55bc316f:E02",
+        "B4:9ffbd355:E03",
+        "B4:f95bd88d:E03",
+        "B5a:8dc1f7db:E08",
+        "B5a:c6f3f411:E02",
+        "B5b:sess_78a289f3:E06",
+        "B5b:sess_851:E01",
+        "B5b:ses_4633:E02",
+        "B61:46e2a7ec3f:E02",
+        "B62:2ee804:E10",
+        "B62:3f47a3cb:D18",
+        "B63:session-ba6ab6:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-3",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "机理/根因/归因想当然",
+      "workpoint": "无实证机理与因果写进交付、根因未证先定案、连环误诊、错误归因误导方向",
+      "symptom": "机理与根因想当然，归因错误误导方向",
+      "correctPractice": "机理/根因结论必须附可证伪证据链；被推翻的归因显式作废回收，不留残余",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E09",
+        "text": "把12个产品缺分销未经核实归责供应商未填，实为过滤bug，错误外联风险且修复后未复查其余10个"
+      },
+      "lessonCount": 20,
+      "sourceIds": [
+        "B2:ee9d1441:E09",
+        "B2:02b722ad:E01",
+        "B4:224e3626:E01",
+        "B4:3645196b:E01",
+        "B4:a927e05c:E03",
+        "B5a:07da144a:E12",
+        "B5b:sess_a23e5439:E03",
+        "B5b:sess_982:E01",
+        "B5b:ses_41ba:E01",
+        "B61:46ecb4df8f:E02",
+        "B61:b59227:E09",
+        "B61:d3032bee:E03",
+        "B61:46f2211d0f:E02",
+        "B61:46e9b39ecf:E04",
+        "B61:53aad9:E01",
+        "B62:3f47a3cb:D09",
+        "B63:c8ccddcc:E04",
+        "B63:session-5f9349:E01",
+        "B63:session-b92167:E01",
+        "B63:session-b92167:E04"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-4",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "轻信未验输入当事实",
+      "workpoint": "轻信用户口述、汇总表、agent产出、公开文档结论，未独立核验即背书",
+      "symptom": "口述/汇总表/下游产出照单全收",
+      "correctPractice": "采纳外部输入（口述/汇总表/agent产出）前做一次独立抽验",
+      "caseStudy": {
+        "sourceId": "B3:fb29060a:E06",
+        "text": "收资审核agent套重型冷链标准提制冷剂危废要求，AI照单背书列P0，被用户质询后大半裁撤"
+      },
+      "lessonCount": 4,
+      "sourceIds": [
+        "B3:fb29060a:E06",
+        "B5a:c075f854:E03",
+        "B5b:sess_78a289f3:E05",
+        "B5b:ses_3afd9d46:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B5b:ses_3afd9d46:E01",
+          "flags": [
+            "源标待议",
+            "终审复核/可裁"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-5",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "未验证前提/想当然断言写入方案交付",
+      "workpoint": "凭记忆/注释/文件名断言、自拟口径与占位、经验值当实测、技术适用性未验、概念混淆、过时事实当现状",
+      "symptom": "假设当事实写进方案与交付",
+      "correctPractice": "方案里每个事实性断言标注来源或「待验证」；不把假设写成事实",
+      "caseStudy": {
+        "sourceId": "B3:d40cf700:E03",
+        "text": "凭对话记忆断言某食品主料是猪肉把14.9改成2.5，未读源表，用户质疑后回读改7.0，数值摆动2.8倍"
+      },
+      "lessonCount": 67,
+      "sourceIds": [
+        "B3:d40cf700:E03",
+        "B3:d40cf700:E05",
+        "B3:d40cf700:E07",
+        "B3:fb29060a:E05",
+        "B3:fb29060a:E08",
+        "B3:9bea7e35:E01",
+        "B4:66b07fdb:E02",
+        "B4:a60aea7e:E03",
+        "B4:a60aea7e:E12",
+        "B4:d901782e:E01",
+        "B4:d901782e:E02",
+        "B4:d901782e:E03",
+        "B4:d901782e:E04",
+        "B4:0e1d7756:E01",
+        "B4:16ea6a8c:E01",
+        "B4:52617f57:E03",
+        "B4:52617f57:E04",
+        "B4:364cc4cb:E03",
+        "B5a:049663a9:E03",
+        "B5a:049663a9:E04",
+        "B5a:07da144a:E13",
+        "B5a:07da144a:E15",
+        "B5a:2bfe4f26:E01",
+        "B5a:783ca29c:E01",
+        "B5a:ses_3f89:E01",
+        "B5a:ses_45a9:E01",
+        "B5a:ses_45a9:E02",
+        "B5a:ses_45d3:E01",
+        "B5a:0ce4d5d8:E01",
+        "B5a:ses_464a:E01",
+        "B5a:ses_449e:E01",
+        "B5a:ses_45f4:E01",
+        "B5a:ses_4730:E03",
+        "B5a:a13425ca:E07",
+        "B5b:session-7c57479a:E05",
+        "B5b:session-7c57479a:E07",
+        "B61:44ee0dee4f:E04",
+        "B61:b59227:E01",
+        "B61:b59227:E03",
+        "B61:b59227:E08",
+        "B61:43f721a88f:E01",
+        "B61:43f721a88f:E02",
+        "B61:450595084f:E01",
+        "B61:46e078b68f:E02",
+        "B61:45e8edb0ff:E01",
+        "B61:45e8edb0ff:E05",
+        "B61:c336b2:E04",
+        "B61:45f356fd8f:E03",
+        "B61:472173865f:E03",
+        "B61:463fb0a29f:E01",
+        "B61:463fb0a29f:E02",
+        "B61:46ed85533f:E01",
+        "B61:46ed85533f:E02",
+        "B62:3f47a3cb:E06",
+        "B62:7a7a84aa:E02",
+        "B62:ab54bd8c:E02",
+        "B62:bd8742:E01",
+        "B62:3f47a3cb:D05",
+        "B62:3f47a3cb:D19",
+        "B63:6be9b7d6:E01",
+        "B63:6be9b7d6:E02",
+        "B63:6f4e7414:E08",
+        "B63:932cd9dd:E03",
+        "B63:2e8e6383:E02",
+        "B63:de081c34:E03",
+        "B63:de081c34:E05",
+        "B63:f8d68b8d:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B3:fb29060a:E08",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B61:44ee0dee4f:E04",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B61:45e8edb0ff:E05",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B61:463fb0a29f:E02",
+          "flags": [
+            "留用户确认"
+          ]
+        },
+        {
+          "id": "B62:7a7a84aa:E02",
+          "flags": [
+            "原type待议"
+          ]
+        },
+        {
+          "id": "B63:6be9b7d6:E02",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B63:932cd9dd:E03",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ],
+      "dualVersion": [
+        {
+          "组": "双4",
+          "ids": [
+            "B62:3f47a3cb:E06",
+            "B62:3f47a3cb:D05"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "E-6",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "title": "幻觉/无源数字写入交付",
+      "workpoint": "虚构配置与CLI、捏造数值、成组无出处数字不标注待核",
+      "symptom": "虚构配置与数字混进交付物",
+      "correctPractice": "无出处数字/配置一律不写入交付；写占位必须显式标注",
+      "caseStudy": {
+        "sourceId": "B5a:ses_3ca5:E01",
+        "text": "申报材料填入市场规模超100亿、客户超万家、年收5-10亿等成组无出处数字，不标注占位待核"
+      },
+      "lessonCount": 2,
+      "sourceIds": [
+        "B5a:ses_3ca5:E01",
+        "B5b:ses_3f79:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S1",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "用已知不可靠搜索通道连查4个关键词即断言系统无冷杯填报记录，用户Excel证伪，差点错误催供应商",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:ee9d1441:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S2",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "对异常4次先给未验证解释均被证伪，向用户输出对供应商的错误指控后自纠",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:ee9d1441:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S3",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "把已被前会话证伪不可靠的填报记录文件当权威源，3个A类产品被错判通过写入交付审核报告",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S4",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "天然气单位缺失/水差千倍被当系统共性问题写入总览与多产品文件，实为抓取丢单位列，7处撤销",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S5",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "凭260706旧抓取判S3核算数量4pcs严重异常写入新版清单，核算汇总证实425220pcs后作废",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S6",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "未查24年同款即定性sugarcane/maize系统性错配为最大发现，随后建议三次反转且中间结论已入沉淀",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E07"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S7",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "齿轮油推荐写「暂用同型号近似因子（见库）」占位，被要求填全后查明库内精确匹配因子俱全",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E09"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S8",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "轻信汇总表把S4阻断原因标为单位不匹配，核实实为21项因子全缺，纠正标注并重写报告",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:23425f6b:E10"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S9",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "仅凭FY25平台草稿断言S1主料完全没填，实有24年表单37行BOM+35条核算，误导催报方向",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:81fec0b1:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S10",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "排查未果即断言平台不显示单重字段并更正记忆、推导值回填差8倍，用户两次纠偏才找到正确入口",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:ee6ad45b:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S11",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "平台数据被中途修改致07-07导出与07-08核算跨版本不一致，GP双记录归属未确认即操作",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:ee6ad45b:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S12",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "蛋液因子先判「名错需改」后改口「无需改值」，机制解释两轮均未经验证",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:3aa8c6ee:E05"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S13",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "0原材料的浓浆两次列入「清单一致」名单，未过业务常识校验，自查核实后撤回",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:2c5e38ff:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S14",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "8个0值产品未核实即写入「与实际不一致」问题清单，实为未填完空壳而非导出bug",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:2c5e38ff:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S15",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P1",
+      "lesson": "混入的P9会话未验证即判「导入无害」，导入后出现在P1项目会话列表",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:959a0453:E04"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S16",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P2",
+      "lesson": "周期碗数v1值前后矛盾（7月称两家477937相同、8月改称某门店396320），会话未澄清留待议",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:d40cf700:E12"
+      ],
+      "flags": [
+        "置信/复核待议",
+        "原type待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S17",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P2",
+      "lesson": "图2TOP10数据错配进交付版含捏造值某产品0.0492，多轮「零误差」结论未覆盖图表，审校倒查才现",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:fb29060a:E16"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S18",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P13",
+      "lesson": "交审核的背景事实2处失实：「d8b1f4c7健康」不成立（三簇71坏行）、「隔离区唯一副本」不严格",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:261e44d8:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S19",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P2",
+      "lesson": "会话头条「数据质量良好可进行计算」省略3项阻断前提与不确定性分级，点估计无区间易当承诺值",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:9bea7e35:E02"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S20",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "数据导出/清洗状态两次误报：未纳入刚定的替换决策、漏看缓存实差3家",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:a60aea7e:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S21",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "定时清洗整点触发未考虑数据落库延迟，若部署将丢整点末位数据，重写469行",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:a60aea7e:E10"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S22",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "对比测试4店全FAIL两轮不完整归因，未读文件即断言基准问题，追问后才定真根因",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:a60aea7e:E11"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S23",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "P5所用数据平台覆盖机制两次过早归因均未察同步架构，第三轮两步写入实验才定案",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:16ea6a8c:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S24",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "盲信记忆『均值0=电表未计量』写入全0能耗清洗结果，实为脚本bug可修复",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:3ae46839:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S25",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "开局断言『东北三省=A严寒区』未核数据，实测某北方省份属B寒冷后公开纠正",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:edc273cd:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S26",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "『438家已回复』断言无单元格级出处，用户质疑后穷举核查定位到G614等单元格",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:81874203:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S27",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "NNLS分解未验证可行性即列方案核心，执行即证死（R²0.15-0.33），分析面过宽被要求聚焦",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:a927e05c:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S28",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "凭记忆假设线上表结构三处全错（city/flag/点名），错误SQL被用户贴回，4轮探针修正",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:151295c4:E01"
+      ],
+      "flags": [
+        "专属边界留痕"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S29",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "断言『面板/IAQ全量写入』并引用不存在的else伪代码，重读后道歉——实际只写异常行",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:1a2def4f:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S30",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "『96%是S2→协议问题』未做基准率检验，重算后地域才是主因，整改方向差点带偏",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:4483565d:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S31",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "断言『蛋糕柜平台无资产+全平台统一』，用户出示截图证伪，db漏11类设备约2万台",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:9ffbd355:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S32",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P5",
+      "lesson": "项目记忆4条既有结论被数值实证推翻（方向记反/3台口径/采样伪影/P1法）",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:cfa0608a:E01"
+      ],
+      "flags": [
+        "专属边界留痕"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S33",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P6",
+      "lesson": "盲派分析误用「午破酉」（六破应为午破卯），学业大成的吉凶链建立在错误规则配对上",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:c2d7d809:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S34",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P6",
+      "lesson": "无证据断言「同事A/同事B是同一人」并replace_all改写分工档案，统筹人归属可能整体错移",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:8dc1f7db:E09"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S35",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P6",
+      "lesson": "把接口全null加工成「从未被控制过」写进交付CSV，75866行全null无效，用户要原始数据推翻重写",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:a13425ca:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S36",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P7",
+      "lesson": "无验证手段即断言「按天配额午夜重置」并承诺明早跑完，实测次日多轮探测仍200013",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_053:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S37",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P7",
+      "lesson": "上轮交接文件误报「某模型厂商key还是占位符等用户提供」，实际真实key已在盘且连通成功",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_cbc:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S38",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P7",
+      "lesson": "模式讲解混入无法溯源的神话起源与比喻叙事，与CLAUDE.md引用不可分",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:ses_3aff:E01"
+      ],
+      "flags": [
+        "源标待议",
+        "终审复核/可裁"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S39",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P12",
+      "lesson": "写纠错机制为零结构上不可能，用户质疑后自认说重了，改为战略层面最终决定权",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:05466b8e:E13"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S40",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P12",
+      "lesson": "仅核对会话注册表层两次断言app最全web可退役，被实测两次否定，第三轮才挖到双daemon根因",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2c329100:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S41",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P15",
+      "lesson": "恢复方案v1两处高危缺陷（索引无脑前置挤掉最新会话/App运行中改索引会被覆盖白做），被独立审核拦截后v2补齐",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:4908ecbd:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "E-S42",
+      "category": "E",
+      "categoryName": "猜测当结论",
+      "project": "P13",
+      "lesson": "第一版客户HTML整套建立在『80家已完成替换』叙事上，实际仅为候选清单，用户抓出后自认并整版重做",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:1be3e8f1:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "F-1",
+      "category": "F",
+      "categoryName": "引用/来源有假",
+      "title": "引用悬空/失效/过期",
+      "workpoint": "引用的文件/路径/版本不存在或已被改名，参照物不在手",
+      "symptom": "引用的东西不在/失效",
+      "correctPractice": "引用前点开验证可达；改名/迁移后全库回搜旧路径",
+      "caseStudy": {
+        "sourceId": "B4:3a21781f:E01",
+        "text": "故障码排除用旧版85家清单（同目录有264家新版未发现），363→361重算"
+      },
+      "lessonCount": 4,
+      "sourceIds": [
+        "B4:3a21781f:E01",
+        "B61:b59227:E10",
+        "B61:9e75ec:E03",
+        "B61:46ed4406af:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "F-2",
+      "category": "F",
+      "categoryName": "引用/来源有假",
+      "title": "引用与原文不符/溯源断链",
+      "workpoint": "误标来源、引语意译失实、超摘引用、具名例证在所引档案0命中",
+      "symptom": "引用与原文对不上、溯源断链",
+      "correctPractice": "引语逐字对照原文；引用编号/页码可回溯",
+      "caseStudy": {
+        "sourceId": "B3:d40cf700:E09",
+        "text": "宣称膠原蛋白拿到GME 2025权威出处且12文献无一悬空，通读PDF自认根本没有绝对数值，出处宣称失实"
+      },
+      "lessonCount": 7,
+      "sourceIds": [
+        "B3:d40cf700:E09",
+        "B62:05466b8e:E01",
+        "B62:05466b8e:E05",
+        "B62:05466b8e:E06",
+        "B62:05466b8e:E08",
+        "B63:c5d3ae74:E01",
+        "B63:c5d3ae74:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "F-3",
+      "category": "F",
+      "categoryName": "引用/来源有假",
+      "title": "编造出处/数值/链接",
+      "workpoint": "组分因子值编造、回执夹带不存在的链接",
+      "symptom": "编造出处/数值/链接",
+      "correctPractice": "编造=红线；不知道就写不知道",
+      "caseStudy": {
+        "sourceId": "B2:81fec0b1:E04",
+        "text": "某食材复合公式组分因子值系编造写入正式总表，用户要求可追溯后自认「是我编的」"
+      },
+      "lessonCount": 2,
+      "sourceIds": [
+        "B2:81fec0b1:E04",
+        "B62:05466b8e:E09"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "G-1",
+      "category": "G",
+      "categoryName": "工具用法错",
+      "title": "API/命令用法错",
+      "workpoint": "参数/端点/包名/命令语法直接用错、环境差异未适配、不核唯一性",
+      "symptom": "API/命令参数用法直接错",
+      "correctPractice": "API/命令先查文档或--help再调；参数错了第一响应是查文档而非换姿势重试",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E01",
+        "text": "并行图片识别疑似命中缓存，两张不同截图被当成同一张，10+工具轮只识出8/17个产品，用户纠正后返工"
+      },
+      "lessonCount": 34,
+      "sourceIds": [
+        "B2:ee9d1441:E01",
+        "B2:ee9d1441:E02",
+        "B2:ee9d1441:E12",
+        "B2:81fec0b1:E06",
+        "B2:81fec0b1:E08",
+        "B2:ee6ad45b:E04",
+        "B3:ae82a305:E03",
+        "B4:883d77df:E03",
+        "B4:16ea6a8c:E03",
+        "B4:b170995b:E02",
+        "B4:b170995b:E03",
+        "B4:81874203:E01",
+        "B4:1a2def4f:E03",
+        "B4:55bc316f:E01",
+        "B5a:049663a9:E02",
+        "B5a:c6f3f411:E04",
+        "B5b:sess_57ada7c2:E01",
+        "B61:425c38db9f:E01",
+        "B61:37d49f7a:E10",
+        "B62:3f47a3cb:E09",
+        "B62:226ebb78:E02",
+        "B62:434c62:E17",
+        "B62:2ee804:E04",
+        "B62:12665990:E02",
+        "B62:3f47a3cb:D14",
+        "B63:6f4e7414:E11",
+        "B63:c5d3ae74:E02",
+        "B63:c8ccddcc:E02",
+        "B63:c8ccddcc:E05",
+        "B63:2e8e6383:E03",
+        "B63:874bbda7:E01",
+        "B63:c412890f:E04",
+        "B63:46326afdcf:E01",
+        "B63:session-b92167:E03"
+      ],
+      "dualVersion": [
+        {
+          "组": "双10",
+          "ids": [
+            "B62:3f47a3cb:E09",
+            "B62:3f47a3cb:D14"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "G-2",
+      "category": "G",
+      "categoryName": "工具用法错",
+      "title": "自研脚本/规则逻辑缺陷（静默失效）",
+      "workpoint": "解析写错、过滤漏、键格式错、边界漏、静默丢内容、假阴性假阳性、断点假续传",
+      "symptom": "自研脚本静默失效，产出假结果",
+      "correctPractice": "自研脚本上线前跑对抗样本（空输入、边界、脏数据）+小样本人工对账",
+      "caseStudy": {
+        "sourceId": "B2:8f875a9b:E01",
+        "text": "语料去重键取前80字符致共享路径前缀消息误判DUP，DUP仍写入正典并计入211条基数"
+      },
+      "lessonCount": 45,
+      "sourceIds": [
+        "B2:8f875a9b:E01",
+        "B3:fb29060a:E04",
+        "B3:fb29060a:E14",
+        "B4:10fb1bad:E04",
+        "B4:a60aea7e:E02",
+        "B4:0b27b521:E03",
+        "B4:0e1d7756:E02",
+        "B4:16ea6a8c:E02",
+        "B4:7a5b3346:E01",
+        "B4:7a5b3346:E02",
+        "B4:7a5b3346:E04",
+        "B4:81874203:E06",
+        "B4:d1e54fee:E01",
+        "B4:9ffbd355:E02",
+        "B4:14e83c8d:E02",
+        "B4:74bf95fd:E01",
+        "B4:74bf95fd:E02",
+        "B4:sess_7ac:E01",
+        "B4:sess_7ac:E02",
+        "B5a:07da144a:E05",
+        "B5a:07da144a:E09",
+        "B5a:07da144a:E10",
+        "B5a:07da144a:E20",
+        "B5a:07da144a:E21",
+        "B5a:07da144a:E22",
+        "B5a:c075f854:E01",
+        "B5a:c075f854:E02",
+        "B61:472173865f:E02",
+        "B61:37d49f7a:E02",
+        "B61:37d49f7a:E03",
+        "B61:37d49f7a:E04",
+        "B61:53aad9:E02",
+        "B62:3f47a3cb:E13",
+        "B62:226ebb78:E03",
+        "B62:434c62:E02",
+        "B62:8ddee7b5:E04",
+        "B62:8ddee7b5:E07",
+        "B62:2ee804:E08",
+        "B62:b02f68c9:E06",
+        "B62:2b9dcec8:E03",
+        "B62:3f47a3cb:D11",
+        "B63:6f4e7414:E02",
+        "B63:6f4e7414:E04",
+        "B63:874bbda7:E02",
+        "B63:c412890f:E03"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "G-3",
+      "category": "G",
+      "categoryName": "工具用法错",
+      "title": "无效偏方/低效手法",
+      "workpoint": "伪装UA绕反爬、逐台串行、裸测即全量、单参数赌博式调优、不复用已验证实现",
+      "symptom": "偏方与低效手法空耗轮次",
+      "correctPractice": "拿不准就用已验证路径；偏方先小实验验证，别拿全量当试验场",
+      "caseStudy": {
+        "sourceId": "B3:ae82a305:E04",
+        "text": "自写脚本pageSize固定100翻65页+探测做9次全树扫描约600次请求且每次重建token，用户质疑慢"
+      },
+      "lessonCount": 14,
+      "sourceIds": [
+        "B3:ae82a305:E04",
+        "B4:883d77df:E04",
+        "B4:a0cdec8f:E04",
+        "B4:79379183:E03",
+        "B4:9ffbd355:E01",
+        "B4:00db48d9:E02",
+        "B5a:0ce4d5d8:E02",
+        "B5a:648b265b:E03",
+        "B5a:c6f3f411:E03",
+        "B5b:ses_4633:E03",
+        "B63:c412890f:E05",
+        "B63:46326afdcf:E02",
+        "B63:session-ba6ab6:E02",
+        "B63:ses_4631c5e83f:E02"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B63:c412890f:E05",
+          "flags": [
+            "终审复核/可裁",
+            "通用专属存疑"
+          ]
+        },
+        {
+          "id": "B63:46326afdcf:E02",
+          "flags": [
+            "终审复核/可裁",
+            "通用专属存疑"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "H-1",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "title": "违抗/忽略明示指令与约束",
+      "workpoint": "说了不要仍做、先方案仍动手、明示范围仍铺开、未确认即执行不可逆操作",
+      "symptom": "明示约束被无视，先斩后奏",
+      "correctPractice": "收到明示约束先复述再动手；约束与任务冲突时回问用户，不自行取舍",
+      "caseStudy": {
+        "sourceId": "B2:ee9d1441:E14",
+        "text": "用户明示不能写脚本需逐个人工审核，仍用python批量核查并批量更新11个产品撤销标记"
+      },
+      "lessonCount": 29,
+      "sourceIds": [
+        "B2:ee9d1441:E14",
+        "B2:23425f6b:E06",
+        "B2:81fec0b1:E09",
+        "B2:2c5e38ff:E01",
+        "B2:8f875a9b:E02",
+        "B3:ae82a305:E05",
+        "B3:fb29060a:E02",
+        "B4:883d77df:E02",
+        "B4:ec9cd87c:E01",
+        "B4:66b07fdb:E07",
+        "B4:fa34f22d:E01",
+        "B4:79379183:E02",
+        "B5a:07da144a:E19",
+        "B5a:4440cd44:E01",
+        "B5a:c9f10751:E01",
+        "B5a:ses_3f89:E02",
+        "B5a:d45a4191:E01",
+        "B61:450595084f:E04",
+        "B61:46f2211d0f:E01",
+        "B61:44f69cbdcf:E03",
+        "B61:45e8edb0ff:E02",
+        "B61:44e57fed2f:E01",
+        "B62:ab54bd8c:E01",
+        "B62:b02f68c9:E01",
+        "B62:b02f68c9:E07",
+        "B62:12665990:E01",
+        "B63:494d912c:E01",
+        "B63:f3d662a7:E01",
+        "B63:ses_45fb3cdbcf:E02"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B2:ee9d1441:E14",
+          "flags": [
+            "置信/复核待议"
+          ]
+        },
+        {
+          "id": "B63:f3d662a7:E01",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "H-2",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "title": "需求/概念理解错/答非所问",
+      "workpoint": "概念纠缠、维度答错、术语理解错、已定案仍重问、语义实现偏离",
+      "symptom": "需求/概念/对象理解错，方向性返工",
+      "correctPractice": "需求确认用一句话复述+关键术语对表（对象/维度/口径），含糊处先问",
+      "caseStudy": {
+        "sourceId": "B2:23425f6b:E08",
+        "text": "反馈列把3个产品标「无需修改」，判定缺「全维度通过才免改」概念，用户纠正后整列重做"
+      },
+      "lessonCount": 30,
+      "sourceIds": [
+        "B2:23425f6b:E08",
+        "B2:02b722ad:E04",
+        "B2:3aa8c6ee:E01",
+        "B2:2c5e38ff:E02",
+        "B3:d40cf700:E11",
+        "B4:10fb1bad:E02",
+        "B4:a60aea7e:E09",
+        "B4:a0cdec8f:E07",
+        "B4:9ffbd355:E05",
+        "B5a:07da144a:E08",
+        "B5a:07da144a:E17",
+        "B5a:ses_45e4:E01",
+        "B5a:ses_3726:E01",
+        "B5b:ses_4633:E01",
+        "B61:44ecb5570f:E03",
+        "B61:46ef29f2ef:E03",
+        "B61:471a9c930f:E01",
+        "B61:c336b2:E02",
+        "B61:37d49f7a:E12",
+        "B62:8cf0e297:E01",
+        "B62:8e96109f:E04",
+        "B62:434c62:E01",
+        "B62:434c62:E16",
+        "B62:434c62:E18",
+        "B62:2ee804:E02",
+        "B62:2ee804:E13",
+        "B62:a5c06a:E01",
+        "B62:a5c06a:E02",
+        "B63:ses_45fb3cdbcf:E04",
+        "B63:ses_4631c5e83f:E03"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B61:44ecb5570f:E03",
+          "flags": [
+            "置信/复核待议",
+            "待owner终审",
+            "disputed"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "H-3",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "title": "漏做/未闭环/不同步",
+      "workpoint": "点名项漏做、成果未落盘、交付目录未同步、漏用现成资产、问题被挤掉无交代",
+      "symptom": "点名要的没做/没落盘/没同步",
+      "correctPractice": "交付前对照需求清单逐项打勾；产出落点/文件名/目录与要求逐字核对",
+      "caseStudy": {
+        "sourceId": "B2:ee6ad45b:E05",
+        "text": "用户连续两次要看文件夹路径无直接响应，第三次改问后才核实文件状态回答"
+      },
+      "lessonCount": 22,
+      "sourceIds": [
+        "B2:ee6ad45b:E05",
+        "B2:3aa8c6ee:E04",
+        "B3:d40cf700:E10",
+        "B3:fb29060a:E03",
+        "B3:fb29060a:E20",
+        "B3:fb29060a:E21",
+        "B3:cb3432f0:E02",
+        "B4:d901782e:E06",
+        "B4:0b27b521:E04",
+        "B4:edc273cd:E01",
+        "B4:1ea960b0:E02",
+        "B5a:c075f854:E04",
+        "B5a:648b265b:E04",
+        "B5a:a13425ca:E06",
+        "B5a:b3f39423:E03",
+        "B61:43ef8399cf:E01",
+        "B61:44ebfec18f:E01",
+        "B61:44b35f74df:E02",
+        "B61:37d49f7a:E09",
+        "B62:434c62:E20",
+        "B62:42afa914:E01",
+        "B63:6f4e7414:E06"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "H-4",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "title": "输出形态错配（超载/黑话/语言/受众）",
+      "workpoint": "长文超载、工程黑话、外语回复、内部字段漏进客户版，多轮「看不懂」",
+      "symptom": "输出形态错配，用户「看不懂」多轮返工",
+      "correctPractice": "输出前先问受众：客户版去内部术语、语言跟随用户、长度按用户约束",
+      "caseStudy": {
+        "sourceId": "B4:5beba803:E01",
+        "text": "用户问3个数字核实却以多口径长文回应，被批『没看懂』，2轮才给出一个数"
+      },
+      "lessonCount": 14,
+      "sourceIds": [
+        "B4:5beba803:E01",
+        "B4:92cffe66:E01",
+        "B4:edc273cd:E04",
+        "B4:1ea960b0:E03",
+        "B4:cfa0608a:E02",
+        "B5a:ses_440a:E03",
+        "B5a:c6f3f411:E01",
+        "B61:37d49f7a:E15",
+        "B62:b02f68c9:E03",
+        "B63:6f4e7414:E07",
+        "B63:c5d3ae74:E04",
+        "B63:1be3e8f1:E05",
+        "B63:27257fcd:E02",
+        "B63:import-4:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "H-5",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "title": "超口径/自作主张/过度解读",
+      "workpoint": "自创策略、自行扩大改动面、一句话拔高成架构、授权外附加动作、激进默认",
+      "symptom": "超授权自作主张，动作超出字面授权",
+      "correctPractice": "授权按字面执行，附加动作单独请示；默认选项取保守档",
+      "caseStudy": {
+        "sourceId": "B2:81fec0b1:E01",
+        "text": "自创「核心优先」策略给9产品全导8-sheet，违背已沉淀双轨制与用户交代逻辑，能核算产品缺2-sheet权威导出"
+      },
+      "lessonCount": 11,
+      "sourceIds": [
+        "B2:81fec0b1:E01",
+        "B2:81fec0b1:E02",
+        "B4:a927e05c:E04",
+        "B5b:session-7c57479a:E09",
+        "B5b:10565791:E02",
+        "B5b:ses_3fdc:E02",
+        "B61:45e8edb0ff:E03",
+        "B62:c6f301:E03",
+        "B62:05466b8e:E12",
+        "B62:3f47a3cb:D20",
+        "B63:c8ccddcc:E01"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B62:3f47a3cb:D20",
+          "flags": [
+            "原type待议",
+            "终审复核/可裁"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S1",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P5",
+      "lesson": "分类方案60格可膨胀180格还提议推导气候区映射（现成表在手头），方案返工",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:b170995b:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S2",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P11",
+      "lesson": "改稿自行点名某涂料企业/某认证机构等企业，违背原稿这家公司的刻意匿名前提，被要求全篇清除",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2ee804:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S3",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P13",
+      "lesson": "安装方案明示『不动profile、不装插件』，实际向~/.dsh写入MCP接线并装了插件文件，改动面超出自己声明口径",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:932cd9dd:E02"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S4",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P16",
+      "lesson": "『是不是最终版本』按数据库包维度作答，忽视已有证据指向的模型包维度，用户重问补充后才给正确结论",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:8f0f54fe:E01"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S5",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P13",
+      "lesson": "以『建议全勾』推荐安装纯浏览工具agentsview，与用户找错攒错目标无关，被指出后划为可选默认不装",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:27257fcd:E03"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "H-S6",
+      "category": "H",
+      "categoryName": "理解偏差/指令遵循",
+      "project": "P13",
+      "lesson": "用户要免审批即直接配最激进bypass权限并跳过警告，未给分档风险对比，次轮才自纠建议auto获采纳",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:import-4:E02"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-1",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "同坑反复/盲试不换道",
+      "workpoint": "同一报错同法重试、同类bug连犯不固化、轻量路径/现成资产不用",
+      "symptom": "同一坑反复踩，不换道不固化",
+      "correctPractice": "同一报错第2次出现必须换方法或升级求助；每类新坑当场沉淀规避写法",
+      "caseStudy": {
+        "sourceId": "B2:3aa8c6ee:E03",
+        "text": "openpyxl读数值成字符串同类bug同会话踩4次，S53轮才修成，教训未抽成公共函数"
+      },
+      "lessonCount": 28,
+      "sourceIds": [
+        "B2:3aa8c6ee:E03",
+        "B2:959a0453:E03",
+        "B3:ses_4408:E01",
+        "B3:261e44d8:E01",
+        "B3:cb3432f0:E01",
+        "B3:ses_4682:E03",
+        "B3:d3ad8b9d:E01",
+        "B4:883d77df:E01",
+        "B4:0f600fb7:E01",
+        "B4:16ea6a8c:E05",
+        "B4:f95bd88d:E05",
+        "B5a:062a227c:E02",
+        "B5a:062a227c:E03",
+        "B5a:c075f854:E07",
+        "B5a:ses_45a5:E01",
+        "B5a:ses_4730:E01",
+        "B5a:8dc1f7db:E01",
+        "B62:434c62:E08",
+        "B62:8ddee7b5:E08",
+        "B62:ses_498037562f:E01",
+        "B62:05466b8e:E04",
+        "B62:05466b8e:E10",
+        "B62:05466b8e:E11",
+        "B62:2c329100:E06",
+        "B63:6f4e7414:E09",
+        "B63:c412890f:E02",
+        "B63:de081c34:E01",
+        "B63:de081c34:E04"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B3:d3ad8b9d:E01",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-2",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "作用域/节奏失控",
+      "workpoint": "开场全量读记忆/全盘扫、单轮串联超长触发超时、检索不收敛、重复造轮子",
+      "symptom": "作用域与节奏失控，全量硬扫、单轮超长",
+      "correctPractice": "动手前先界定范围（读哪些、扫哪里）；长任务分步落盘",
+      "caseStudy": {
+        "sourceId": "B2:81fec0b1:E07",
+        "text": "thinking内重复空转无产出致小任务屡超时，用户四次质询「怎么这么慢」"
+      },
+      "lessonCount": 11,
+      "sourceIds": [
+        "B2:81fec0b1:E07",
+        "B4:10fb1bad:E01",
+        "B4:66b07fdb:E05",
+        "B4:66b07fdb:E08",
+        "B4:d901782e:E07",
+        "B4:74bf95fd:E05",
+        "B5a:a564ca30:E01",
+        "B5a:ses_43f8:E01",
+        "B61:46e078b68f:E01",
+        "B62:2b9dcec8:E02",
+        "B63:1be3e8f1:E04"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-3",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "违反已沉淀纪律/先验",
+      "workpoint": "自定纪律自违、封存路线仍押注、审核独立性失守、教训不并入下一批、审计不闭合",
+      "symptom": "已沉淀纪律/先验被绕过，同型问题复发的制度性根因",
+      "correctPractice": "项目已沉淀纪律开工会前必读；与先验矛盾时先重估路线再投入",
+      "caseStudy": {
+        "sourceId": "B3:fb29060a:E13",
+        "text": "改完因子库未先关Excel旧窗口，用户打开见缓存称没看到修改，自认重踩某食品品类项目已立纪律"
+      },
+      "lessonCount": 17,
+      "sourceIds": [
+        "B3:fb29060a:E13",
+        "B4:d901782e:E05",
+        "B4:3ae46839:E03",
+        "B5b:sess_9aa0525c:E02",
+        "B5b:sess_a23e5439:E01",
+        "B5b:sess_053:E02",
+        "B5b:sess_040:E01",
+        "B5b:sess_951:E02",
+        "B61:37d49f7a:E11",
+        "B61:37d49f7a:E13",
+        "B62:444770e1:E02",
+        "B62:05466b8e:E14",
+        "B62:05466b8e:E15",
+        "B62:2b9dcec8:E05",
+        "B62:2c329100:E02",
+        "B62:3f47a3cb:D10",
+        "B63:6f4e7414:E12"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B62:444770e1:E02",
+          "flags": [
+            "原type待议"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-4",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "密钥/敏感信息暴露习惯失守",
+      "workpoint": "明文复述、写进脚本/阅读稿/云同步目录、泄露后不删不吊销",
+      "symptom": "密钥处理习惯性失守，暴露面扩大",
+      "correctPractice": "密钥只进环境变量/密钥管理；进过上下文/日志的密钥用后即吊销",
+      "caseStudy": {
+        "sourceId": "B5a:07da144a:E16",
+        "text": "S0已脱敏的密钥在回答正文被明文复述，绕过脱敏习惯成自然，真实密钥场景将构成泄露"
+      },
+      "lessonCount": 7,
+      "sourceIds": [
+        "B5a:07da144a:E16",
+        "B5b:session-7c57479a:E10",
+        "B5b:sess_d60:E02",
+        "B5b:sess_270:E02",
+        "B5b:sess_302:E02",
+        "B5b:ses_3afd9d46:E02",
+        "B5b:ses_45a9:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-5",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "先斩后奏/未确认高风险动作",
+      "workpoint": "确认未答复即rm、强杀用户进程、先毁后建",
+      "symptom": "不可逆动作先于确认执行",
+      "correctPractice": "不可逆操作（rm/强杀/先毁后建）必须等显式确认，确认在先行动在后",
+      "caseStudy": {
+        "sourceId": "B4:0e1d7756:E03",
+        "text": "未经确认强杀用户正在使用的Excel进程解锁定，或丢失其他未保存修改"
+      },
+      "lessonCount": 4,
+      "sourceIds": [
+        "B4:0e1d7756:E03",
+        "B4:f95bd88d:E04",
+        "B62:3f47a3cb:E14",
+        "B62:3f47a3cb:D12"
+      ],
+      "dualVersion": [
+        {
+          "组": "双8",
+          "ids": [
+            "B62:3f47a3cb:E14",
+            "B62:3f47a3cb:D12"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "I-6",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "title": "资产与文档失序不自包含",
+      "workpoint": "多代skill并存、文档关键信息散乱、默认路径依赖老目录",
+      "symptom": "资产多代并存不自包含",
+      "correctPractice": "资产单一事实源：旧代归档、SKILL.md自包含、路径不依赖历史目录",
+      "caseStudy": {
+        "sourceId": "B62:3f47a3cb:E11",
+        "text": "ilcd多代skill并存、SKILL.md缺操作指导，用户连问这是干嘛的，资产难被正确使用"
+      },
+      "lessonCount": 3,
+      "sourceIds": [
+        "B62:3f47a3cb:E11",
+        "B62:05466b8e:E03",
+        "B62:3f47a3cb:D16"
+      ],
+      "dualVersion": [
+        {
+          "组": "双12",
+          "ids": [
+            "B62:3f47a3cb:E11",
+            "B62:3f47a3cb:D16"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S1",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P1",
+      "lesson": "明文账号密码写入skill文件，与自己「不保存凭据」的自设承诺矛盾，凭据暴露面长期存在",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:ee9d1441:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S2",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P1",
+      "lesson": "因子汇总表新旧两版并行未声明权威，改的与用户对账的不是一份，188行ID未同步引发三轮追问",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:02b722ad:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S3",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P1",
+      "lesson": "「以DSH为准205条」静默弃用，正典改由迁移JSON重建211条，三数未对账即宣布定稿",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:8f875a9b:E03"
+      ],
+      "flags": [
+        "置信/复核待议"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S4",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P2",
+      "lesson": "「说明禁=开头」红线刚写进定版方案，同日构建即踩上：汇总页说明以=开头被当公式报#NAME?",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B3:fb29060a:E12"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S5",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P5",
+      "lesson": "已验证时间点匹配后扩全量却退回整体平均关联，三档风险分级整体作废",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B4:66b07fdb:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S6",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P6",
+      "lesson": "下载4个skill仅1次write即静默终止，无收尾无交代，用户22分钟后换会话重发才完成",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:ses_45a4:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S7",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P6",
+      "lesson": "无样例逆向icnf配置逐键试错，6次重启认证服务逼用户连输6次管理员密码，最终仍卡在未猜中键",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:8dc1f7db:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S8",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P6",
+      "lesson": "PowerShell写&&连败2次、emoji撞GBK编码连败3次，5次失败调用才读到首份数据，下一用户轮同模式再犯",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:b3f39423:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S9",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P6",
+      "lesson": "第二轮实测重建含平台密钥临时文件后会话终止未清理，与首轮自证过的清理纪律不对称，密钥残留",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:c6f3f411:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S10",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P7",
+      "lesson": "频控后设计硬等待重试又在冷却期多通道反复试探+定时重试，配额被打爆封禁超21小时，多次确定性解封预测全部落空",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_78a289f3:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S11",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P7",
+      "lesson": "GBK终端下两脚本踩同一编码根因：✓字符致崩溃、open缺encoding再崩，首修后未举一反三",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_78a289f3:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S12",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P7",
+      "lesson": "自创控制台粘贴爬取路线反复横跳，被用户两次拉回线下脚本工作流，约两小时0页产出",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_78a289f3:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S13",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P7",
+      "lesson": "回溯承认封禁期内脚本5轮+浏览器4次重试「大概率把窗口往后顶」，跨会话统一立案存证",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:sess_951:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S14",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P7",
+      "lesson": "改package.json遇npm SSL错误即会话中断，更新达成与否无证据无收尾说明",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:ses_4683:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S15",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "签名400连败8+次盲试不同拼法不换道不汇报，核心诉求电表数量零产出",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:4728d563cf:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S16",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "找API网关盲猜10+域名+扫内网IP段多轮零进展，不先问用户，用户两次介入才收敛",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:d3032bee:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S17",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "PowerShell inline python -c引号嵌套同型SyntaxError约6次，已验证写文件方案仍被回退",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:d3032bee:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S18",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "用户明文密码在回复正文复述≥3处并指导浏览器明文输入，无脱敏提醒，泄漏面扩大",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:d3032bee:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S19",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "未盘点既有脚本即新建生成脚本，用户纠正后删除，改复用4个现有函数",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:44b35f74df:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S20",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "云同步盘文件FS_STALE_VERSION首错后同批连发6次edit全败，三turn重复同型失败",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:c336b2:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S21",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P8",
+      "lesson": "两轮请求抓29测点实时数据连败后静默放弃转历史数据，该轮无任何结论文本",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:45f356fd8f:E05"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S22",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P9",
+      "lesson": "检索不盘点现成实现（三级模糊+全量总表在库未用），四版三轮用户纠正数倍轮次",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:37d49f7a:E08"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S23",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P9",
+      "lesson": "审定后交付物三次被同名覆盖/追加致sha漂移，反复触发增量确认，第三次复现才总结教训",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B61:37d49f7a:E14"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S24",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P10",
+      "lesson": "删除依赖模型错误（真根因为产品页关联），约30轮试错未果由用户点破，无效循环消耗大",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:434c62:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S25",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P10",
+      "lesson": "验证脚本generator遍历顺序bug连续犯两次，制造D21假对账分歧，险些误判受控账本有错",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:434c62:E13"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S26",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P11",
+      "lesson": "绕过项目CLAUDE.md规定的matcher skill流程手撸pandas检索，被用户抓出后自认姿势不对重跑",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:1d4e1905:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S27",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P11",
+      "lesson": "kiro的PowerShell全程频繁吞stdout至少6处，POC已沉淀第一步落盘规则本会话再次完整重演",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:8ddee7b5:E09"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S28",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P12",
+      "lesson": "session-前缀处理bug同一诊断任务连踩3次（含拼出双前缀路径），错误结论靠自我怀疑纠正",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2c329100:E04"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S29",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P12",
+      "lesson": "desktop profile已封死为app独占管理仍手改package.json装入插件，绕过平台安全边界",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2c329100:E07"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S30",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P12",
+      "lesson": "锚定某内网镜像仓库路线空转约8轮，用户首贴已并列本机CLI标签，三次纠正后才自认带偏方向",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2c329100:E08"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S31",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P12",
+      "lesson": "L5试点初版架构缺独立审核兜底层，违反用户刚立的常设规则，两问质询后才补齐五阶段架构",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:05466b8e:E16"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "I-S32",
+      "category": "I",
+      "categoryName": "流程失控/无效循环",
+      "project": "P14",
+      "lesson": "做真实感调整时把预测峰值降到自立的『须超阈值』约束之下且未提示冲突，靠用户重申才恢复约束",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B63:ses_45fb3cdbcf:E06"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-1",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "会话零响应（无任何AI输出）",
+      "workpoint": "提问后会话终止无输出",
+      "symptom": "会话零输出",
+      "correctPractice": "会话无输出=可用性事故，平台侧排查观测（非AI行为问题，挂账）",
+      "caseStudy": {
+        "sourceId": "B5b:ses_3b000fe0:E01",
+        "text": "两问（某厂商模型版本区别）均零响应会话终止，无任何AI输出"
+      },
+      "lessonCount": 4,
+      "sourceIds": [
+        "B5b:ses_3b000fe0:E01",
+        "B5b:ses_4217:E01",
+        "B5b:ses_3b0018ea:E01",
+        "B5b:ses_3afd7118:E01"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-2",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "凭证暴露面扩大",
+      "workpoint": "密码/密钥贴进聊天、存进项目记忆、摘录进总结",
+      "symptom": "凭证进聊天/记忆/总结",
+      "correctPractice": "凭证不进聊天/记忆/总结；已暴露立即轮换",
+      "caseStudy": {
+        "sourceId": "B3:ae82a305:E07",
+        "text": "用户把控制台明文密码贴进聊天要求登录，AI提醒改密、失败1次即停、未落盘，密码残留聊天记录泄露面"
+      },
+      "lessonCount": 3,
+      "sourceIds": [
+        "B3:ae82a305:E07",
+        "B4:14e83c8d:E03",
+        "B4:f95bd88d:E06"
+      ],
+      "flaggedSources": [
+        {
+          "id": "B3:ae82a305:E07",
+          "flags": [
+            "置信/复核待议"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-3",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "交付物双版本并存未废弃",
+      "workpoint": "被否定口径的旧交付不废弃不标注，与新交付并存",
+      "symptom": "双版本交付并存",
+      "correctPractice": "口径被否定的旧交付物立即归档或标注作废",
+      "caseStudy": {
+        "sourceId": "B2:2c5e38ff:E05",
+        "text": "被否定口径的docx留存未废弃未标注，与新md并存两份结论不一致的交付物"
+      },
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:2c5e38ff:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-4",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "内部术语汇报",
+      "workpoint": "满口内部代号被批「说哪个文件」",
+      "symptom": "内部术语汇报",
+      "correctPractice": "汇报用真实文件名与业务语言",
+      "caseStudy": {
+        "sourceId": "B2:02b722ad:E05",
+        "text": "汇报满口「8-sheet」「col5」内部术语，用户批评「说哪个文件」后道歉改真实文件名重述"
+      },
+      "lessonCount": 1,
+      "sourceIds": [
+        "B2:02b722ad:E05"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-5",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "交付写进易失位置",
+      "workpoint": "交付物放/tmp且不附路径",
+      "symptom": "交付落易失位置",
+      "correctPractice": "交付物落稳定路径并在消息附绝对路径",
+      "caseStudy": {
+        "sourceId": "B5a:ses_43f8:E03",
+        "text": "4份讲解文档全部写进易失/tmp且交付不附路径，用户三轮追问才定位，重启即丢"
+      },
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5a:ses_43f8:E03"
+      ]
+    },
+    {
+      "entryType": "card",
+      "id": "Z-6",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "title": "根因未定位诚实挂账",
+      "workpoint": "导入报错根因未定位，列遗留清单转路线",
+      "symptom": "根因未定位诚实挂账",
+      "correctPractice": "挂账附复现信息与已排除项，转路线前评估继承风险",
+      "caseStudy": {
+        "sourceId": "B62:3f47a3cb:E10",
+        "text": "某区域交付包openLCA导入报错多轮排查未定位根因，诚实挂账后转JSON-LD路线，同源skill存继承风险"
+      },
+      "lessonCount": 2,
+      "sourceIds": [
+        "B62:3f47a3cb:E10",
+        "B62:3f47a3cb:D15"
+      ],
+      "dualVersion": [
+        {
+          "组": "双11",
+          "ids": [
+            "B62:3f47a3cb:E10",
+            "B62:3f47a3cb:D15"
+          ]
+        }
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "Z-S1",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "project": "P7",
+      "lesson": "「配置模型为某厂商模型」因会话未登录未执行，仅输出请登录提示",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B5b:93730c61:E01"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "Z-S2",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "project": "P11",
+      "lesson": "项目级matcher skill从未注册进会话技能目录，系统无法强制加载，构成手撸检索的结构性诱因",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:1d4e1905:E02"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "Z-S3",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "project": "P11",
+      "lesson": "自创搭配绿色贸易壁垒持续抬升不惯用，用户质疑后改持续高筑",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2ee804:E03"
+      ]
+    },
+    {
+      "entryType": "single",
+      "id": "Z-S4",
+      "category": "Z",
+      "categoryName": "长尾杂项",
+      "project": "P11",
+      "lesson": "某多城段改写引入同句双围绕语病，自检只查政策名未查语病，残留交付正文",
+      "lessonCount": 1,
+      "sourceIds": [
+        "B62:2ee804:E06"
+      ]
+    }
+  ]
+}
