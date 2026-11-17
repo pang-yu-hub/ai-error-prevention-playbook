@@ -1,0 +1,29 @@
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# editors / tools
+*.swp
+*~
+.vscode/
+.idea/
+
+# temp / logs / backups
+*.log
+*.tmp
+.tmp-*/
+*.bak
+
+# secrets & credentials — never commit
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+*secret*
+
+# package / build dirs (not expected here; guard anyway)
+node_modules/
+__pycache__/
+dist/
